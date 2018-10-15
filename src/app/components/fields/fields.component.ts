@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faSave, faPlus, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { FieldsService } from '../../services/fields.service';
 
 @Component({
   selector: 'app-fields',
@@ -12,7 +13,9 @@ export class FieldsComponent implements OnInit {
   faPlus = faPlus;
   faTrashAlt = faTrashAlt;
 
-  constructor() { }
+  constructor(
+    private fieldService: FieldsService
+  ) { }
 
   ngOnInit() {
   }
